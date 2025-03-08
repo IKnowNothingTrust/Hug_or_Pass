@@ -1,0 +1,8 @@
+:root {
+    font-family: Helvetica, "Inter", sans-serif;
+    --mainBlue: rgb(15 163 177);
+    --mainGray: rgb(217 229 214);
+    --mainLightYellow: rgb(237 222 164);
+    --mainLightRed: rgb(247 160 114);
+    --mainOrange: rgb(255 155 66);
+}

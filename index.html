@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="SOPmainCSS.css" />
+    <title>Smash or Pass</title>
+    <style>
+      body {
+        margin: 0%;
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+      }
+      .nav {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        padding-left: 30vw;
+        background-color: white;
+        h2 {
+          text-decoration: none;
+          color: black;
+          font-size: 1.5rem;
+          padding: 25px;
+          font-weight: 100;
+          cursor: pointer;
+          p { display: none; background-color: white; padding: 12px; border-radius: 12px; font-size: 1rem; width: 11%; cursor: none; margin: 11px;}
+        }
+        h2:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+      .upperDiv {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 300px;
+        background-color: var(--mainGray);
+        border-bottom: 4px solid rgba(0, 0, 0, 0.197);
+        h1 {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+          
+        }
+        p {
+          font-size: 1.2rem;
+          margin: 0px 20px;
+          text-align: center;
+        }
+      }
+      .bottomDiv {
+        width: 100%;
+        height: 1000px;
+        padding: 12px;
+        padding-top: 32px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        background-color: rgb(230 232 244);
+      }
+      .quizDiv {
+        background-color: white;
+        border-radius: 18px;
+        width: 400px;
+        height: 280px;
+        padding: 0px;
+        padding-top: 42px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0px 0px 22px 5px rgba(0, 0, 0, 0.4);
+        margin: 18px;
+      }
+      .quizImage {
+        border-radius: 18px;
+        transform: scale(0.5);
+        transform-origin: center;
+        object-fit: cover;
+        width: 700px;
+        margin: -50px;
+        height: 350px;
+      }
+      
+      .nav h2:hover p { 
+        display: block;
+        position: absolute;
+        width: 200px;
+      }
+      @media (max-width: 440px) {
+        .quizDiv {
+            width: 95vw;
+        }
+        .quizDiv .quizImage {
+            width: 160vw;
+        }
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h2 class="link">Who made this Crap?
+        <p>
+            I am a new dev learning html css and js and this is a learning project...
+        </p>
+    </h2>
+    </div>
+    <div class="upperDiv">
+      <h1>Hug or Pass?</h1>
+      <p>
+        This website is a collection of images of people. You can choose to hug
+        or pass on each image.
+      </p>
+    </div>
+    <div class="bottomDiv">
+      <div onclick="location.href='smashOrPass.html', selectQuiz('waifus')" class="quizDiv">
+        <div>
+          <h2 style="margin: 6px">Waifus</h2>
+          <p style="margin: 0px">A list of the top waifus</p>
+        </div>
+        <img class="quizImage" src="images/AsunaYuuki.jpg" alt="" />
+      </div>
+
+      <div onclick="location.href='smashOrPass.html', selectQuiz('husbandos')" class="quizDiv">
+      <div>
+        <h2 style="margin: 6px">Husbandos</h2>
+        <p style="margin: 0px">A list of the top Husbandos</p>
+      </div>
+      <img class="quizImage" src="images/SatoruGojou.jpg" alt="" />
+    </div>
+    
+
+    <div onclick="location.href='smashOrPass.html', selectQuiz('weird')" class="quizDiv">
+    <div>
+      <h2 style="margin: 6px">Weird</h2>
+      <p style="margin: 0px">Hug or Pass, but it gets weirder</p>
+    </div>
+    <img style="transform: scale(0.5); width: 100%;" class="quizImage" src="images/Schlurp.png" alt="" />
+  </div>
+  </div>
+
+    <script>
+        function selectQuiz(quiz) {
+            sessionStorage.setItem("QUIZID", quiz);
+        }
+
+    </script>
+  </body>
+</html>
