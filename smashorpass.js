@@ -1,7 +1,6 @@
 let quitId = sessionStorage.getItem("QUIZID");
 let waifusQuiz = [
     { name: "Asuna Yuuki", image: "AsunaYuuki.jpg", anime: "Sword Art Online" },
-    { name: "Darkness", image: "Darkness.png", anime: "KonoSuba" },
     { name: "Rem", image: "Rem.jpg", anime: "Re:ZERO" },
     { name: "Emilia", image: "Emilia.jpg", anime: "Re:ZERO" },
     { name: "ZeroTwo", image: "ZeroTwo.jpg", anime: "DARLING in the FRANXX" },
